@@ -1,0 +1,41 @@
+@startuml
+title ショッピングサイトから注文する
+
+|ショッピングサイト|
+start
+  :カートに入れる;
+  fork
+    :購入数量を変更する;
+  fork again
+    :受取方法を商品単位で選択する（店頭受取・配送）;
+  note right: 商品毎に選択可能なため、店頭＆配送もある
+  end fork
+
+  :通知方法を選択する;
+  split
+    :LINEで通知する;
+    :LINEアカウントの連携;
+  split again
+    :メールアドレスで通知する;
+    :メールアドレスの入力;
+  end split
+  :お支払いコードを発行する;
+|API|
+  :取引データの作成;
+  fork
+    |スマレジ|
+    :SmaregiCheckout取引データの作成;
+  fork again
+    |DB|
+    :draft_orderの作成;
+    if (受取方法店に店頭受取を含む?) then (yes)
+      :store_pickの作成;
+    endif
+    if (受取方法に配送を含む?) then (yes)
+      :shipmentの作成;
+    endif
+  end fork
+|ショッピングサイト|
+  :QRコードの表示;
+stop
+@enduml
