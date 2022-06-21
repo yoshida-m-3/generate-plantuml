@@ -1,4 +1,4 @@
-```plantuml:日本語のファイル名
+```plantuml:eigonofile
 @startuml
 actor Foo1
 boundary Foo2
