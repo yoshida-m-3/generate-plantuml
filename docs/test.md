@@ -1,4 +1,4 @@
-```plantuml:md-sample-sequence
+```plantuml:日本語のファイル名
 @startuml
 actor Foo1
 boundary Foo2
