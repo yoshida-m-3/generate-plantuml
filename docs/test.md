@@ -12,6 +12,6 @@ Foo1 -> Foo3 : To control
 Foo1 -> Foo4 : To entity
 Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
-Foo2 -> Foo1 : To actor
+Foo2 -> Foo３ : To actor
 @enduml
 ```
