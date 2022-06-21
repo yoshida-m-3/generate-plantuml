@@ -14,4 +14,5 @@ Foo1 -> Foo6 : To collections
 Foo2 -> テスト : To actor
 Foo1 -> テスト : To Test
 Foo3 -> テスト : 新しく追加
+Foo4 -> テスト : 新しく追加2
 @enduml
