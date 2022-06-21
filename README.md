@@ -2,11 +2,11 @@
 
 ## Generate Plantuml
 
-星が一番多かったけどイマイチ  
-外部リクエストして図を生成しているのが致命的
-
 repository:
 https://github.com/marketplace/actions/generate-plantuml
+
+星が一番多かったけどイマイチ  
+外部リクエストして図を生成しているのが致命的
 
 - rootに配置されたファイルをカレントパス(.)で生成しようとするとエラー
   - 必ず1つディレクトリを挟む必要がある
